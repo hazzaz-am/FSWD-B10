@@ -1,0 +1,116 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+}
+
+main {
+	width: 1000px;
+	margin-inline: auto;
+	padding: 1rem 0;
+}
+
+.form__header h2 {
+	color: #ec8701;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 15px;
+}
+
+.form__header fieldset {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	border: 0;
+	border-top: 1px dashed #ccc;
+	color: #333;
+}
+
+.forms {
+	display: flex;
+	padding: 1rem;
+}
+
+.forms .mandatory__fields .mandatory {
+	color: #666666;
+	font-size: 9px;
+}
+
+.forms .mandatory__fields {
+	width: 50%;
+	padding-right: 1rem;
+}
+
+.forms .input__group label,
+p {
+	display: block;
+	margin: 2px 0;
+	color: #666666;
+	font-size: 15px;
+}
+
+form {
+	width: 100%;
+}
+
+form input[type="text"],
+input[type="email"],
+select {
+	width: 100%;
+	background: -webkit-linear-gradient(
+		#ffffff 20%,
+		#f6f6f6 90%,
+		#eeeeee 52%,
+		#f4f4f4 100%
+	);
+	border: 1px solid #ddd;
+	height: 30px;
+	color: #444;
+}
+
+fieldset.birth {
+	padding: 0.35em 0.625em 0.75em;
+	border: 1px solid silver;
+}
+
+fieldset.birth .input__group {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+}
+
+.input__group.radio {
+	display: flex;
+	gap: 1rem;
+}
+
+.input__group.radio .input__field {
+	display: flex;
+	gap: 10px;
+}
+
+.input__group.radio .input__field label {
+	display: inline-block;
+	font-weight: 700;
+}
+
+.forms .indentification__fields {
+	width: 50%;
+	padding-left: 1rem;
+	border-left: 1px solid #ccc;
+}
+
+input[type="submit"] {
+	background: -webkit-linear-gradient(#fefefe, #d8d8d8);
+	border: 1px solid #cbcbcb;
+	padding: 3px 12px 6px 12px;
+	cursor: pointer;
+	font-size: 120%;
+	margin-top: 6px;
+	box-shadow: 0 2px 2px rgba(255, 255, 255, 0.4) inset,
+		0 -2px 1px rgba(0, 0, 0, 0.2) inset, 0 0 5px rgba(0, 0, 0, 0.1);
+	color: #666666;
+}
+
+input[type="file"] {
+	color: #666666;
+}

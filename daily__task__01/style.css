@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+  width: calc(100vw - 10%);
+	margin: auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+
+header div a {
+  text-decoration: none;
+  color: black;
+  transition: .4s;
+}
+
+header div a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  padding: 30px 0;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin-right: 2rem;
+  transition: .4s;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li:hover {
+  transform: translateY(-5px);
+}
+
+
+.blogs__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blogs__content section {
+  width: 70%;
+  /* background-color: beige; */
+}
+
+.blogs__content section article {
+  padding: 1rem;
+}
+
+.blogs__content section article .img{
+  width: 500px;
+  object-fit: cover;
+}
+
+.blogs__content section article .img img {
+  width: 100%;
+}
+
+.blogs__content section article .content {
+  margin: 1rem 0;
+}
+
+.blogs__content section article .content h2 {
+  text-transform: capitalize;
+}
+
+.blogs__content section article .content p {
+  margin: .5rem 0;
+}
+
+.blogs__content section article .content button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: .4s;
+}
+
+.blogs__content section article .content button:hover {
+  background-color: beige;
+  color: black;
+}
+
+.blogs__content section article .content .content__footer {
+  display: flex;
+  justify-content: space-between;
+  color: #444;
+}
+
+.blogs__content section article .content .content__footer p {
+  text-transform: capitalize;
+}
+
+.blogs__content aside {
+  width: 30%;
+  padding: 1rem;
+}
+
+aside h4 {
+  margin: 1rem 0;
+}
+
+aside article {
+  margin-top: 1rem;
+}
+
+article .related__blogs {
+  display: flex;
+  align-items: center;
+}
+
+article .related__blogs .image {
+  width: 100px;
+}
+
+article .related__blogs .image img {
+  width: 100%;
+}
+
+article .related__blogs .sidebar__content h4{
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+footer p {
+  text-align: center;
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
