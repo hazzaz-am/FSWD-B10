@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	border: 2px solid #ccc;
+	padding: 20px;
+	width: 80%;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.form-parts {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.form-control {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-bottom: 1rem;
+}
+
+.form-left-part {
+  width: 45%;
+}
+.form-right-part {
+  width: 45%;
+}
+
+label[for="name"],
+label[for="email"],
+label[for="password"],
+label[for="photo"],
+label[for="favcolor"],
+label[for="course__fee"],
+p {
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+	padding: 6px;
+}
+
+input[type="submit"] {
+	background-color: hsl(0, 0%, 10%);
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	font-size: 17px;
+	padding: 10px;
+	transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+	background-color: hsl(0, 0%, 0%);
+}

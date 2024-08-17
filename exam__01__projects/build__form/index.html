@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Build Form</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+    <main>
+      <form action="#">
+        <h2>Course Purchase</h2>
+				<div class="form-parts">
+          <div class="form-left-part">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input type="text" placeholder="Name" id="name" />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input type="email" placeholder="Email" id="email" />
+            </div>
+            <div class="form-control">
+              <label for="password">Password</label>
+              <input type="password" placeholder="Password" id="password" />
+            </div>
+            <div class="form-control">
+              <p>Course Duration: </p>
+              <select name="duration" id="duration">
+                <option value="select__duration" selected>Select Duration</option>
+                <option value="3_month">3 month</option>
+                <option value="6_month">6 month</option>
+                <option value="9_month">9 month</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-right-part">
+            <div class="form-control">
+              <p>Select Course:</p>
+              <div class="single__course">
+                <input
+                  type="checkbox"
+                  name="single__course"
+                  id="course1"
+                  value="MERN Stack"
+                />
+                
+                <label for="course1">MERN Stack</label>
+              </div>
+              <div class="single__course">
+                <input
+                  type="checkbox"
+                  name="single__course"
+                  id="course2"
+                  value="Full Stack"
+                />
+                <label for="course2">Full Stack</label>
+              </div>
+              <div class="single__course">
+                <input
+                  type="checkbox"
+                  name="single__course"
+                  id="course3"
+                  value="Backend Developer"
+                />
+                <label for="course3">Backend Developer</label>
+              </div>
+            </div>
+            <div class="form-control">
+              <p>Prefer:</p>
+              <div class="single__medium">
+                <input
+                  type="radio"
+                  name="single__medium"
+                  id="online"
+                  value="Online"
+                />
+                <label for="online">Online</label>
+              </div>
+              <div class="single__medium">
+                <input
+                  type="radio"
+                  name="single__medium"
+                  id="offline"
+                  value="Offline"
+                />
+                <label for="offline">Offline</label>
+              </div>
+            </div>
+            <div class="form-control">
+              <label for="photo">Select Photo:</label>
+              <input type="file" name="photo" id="photo">
+            </div>
+            <div class="form-control">
+              <label for="favcolor">Dashboard Mode: </label>
+              <input type="color" value="#ff0000" name="favcolor" id="favcolor">
+            </div>
+            <div class="form-control">
+              <label for="course__fee">Course Fee: </label>
+              <input type="range" name="course__fee" id="course__fee" min="5000" max="10000" value="5000">
+            </div>
+          </div>
+        </div>
+        <div class="form-control">
+          <input type="submit" value="Submit" id="submit">
+        </div>
+			</form>
+		</main>
+	</body>
+</html>
