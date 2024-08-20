@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+}
+
+/* navbar styling */
+
+.navbar-area {
+  padding: 40px 0;
+}
+
+nav.flex-group {
+  justify-content: space-between;
+}
+
+/* banner area */
+.banner-area {
+  background-color: hsla(208, 86%, 71%);
+}
+
+/* shipping-area */
+
+.shipping-area {
+  background-color: hsla(33, 100%, 71%);
+  padding: 40px 0;
+}
+
+.shipping.flex-group {
+  justify-content: space-between;
+}
+
+.shipping h2 {
+  width: 470px;
+}
