@@ -1,0 +1,64 @@
+form {
+	padding: 20px;
+	width: 80%;
+}
+
+.contact-title {
+	margin-bottom: 5rem;
+}
+
+.form-parts {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.form-control {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-bottom: 1rem;
+}
+
+.form-left-part {
+	width: 45%;
+}
+.form-right-part {
+	width: 45%;
+}
+
+label[for="name"],
+label[for="email"],
+label[for="message"] {
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	padding: 6px;
+  outline: none;
+}
+
+input[type="submit"] {
+	background-color: hsl(0, 0%, 10%);
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	font-size: 17px;
+	padding: 10px;
+	transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+	background-color: hsl(0, 0%, 0%);
+}
+
+textarea {
+  resize: none;
+}
+
+iframe {
+  max-width: 100%;
+}

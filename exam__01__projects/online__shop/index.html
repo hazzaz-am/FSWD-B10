@@ -1,12 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Shop</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Online Shop</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<!-- Navbar Area -->
+			<section class="navbar-area" id="home">
+				<nav class="navbar container">
+					<ul class="flex-group">
+						<li><a href="#home">Home</a></li>
+						<li><a href="./single_product.html" target="_blank">Single Product</a></li>
+						<li><a href="./contact.html" target="_blank">Contact</a></li>
+						<li><a href="./checkout.html" target="_blank">Checkout</a></li>
+						<li><a href="./registration.html" target="_blank">Registration</a></li>
+					</ul>
+				</nav>
+			</section>
+
+			<!-- Banner Area -->
+			<section class="banner-area">
+				<div class="banner container flex-group">
+					<div class="banner-content">
+						<h1>Let's make beautiful flowers a part of your life.</h1>
+						<p>
+							It is a long established fact that a reader will be distracted by
+							the readable content of a page when looking at its layout. The
+							point of using Lorem Ipsum is that it has a more-or-less normal
+							distribution of letters.
+						</p>
+						<button>Shop Now</button>
+					</div>
+
+					<div class="image-file">
+						<img src="./images/banner-img.png" alt="" />
+					</div>
+				</div>
+			</section>
+
+			<!-- Featured Products -->
+			<section class="featured__products-area">
+				<div class="featured-products container">
+					<h2>Our Featured Flowers</h2>
+					<p>
+						It is a long established fact that a reader will be distracted by
+						the readable content of a page when looking at its layout.
+					</p>
+					<div class="products-main flex-group">
+						<div class="single-product product-one">
+							<div class="product-img">
+								<img src="./images/product-img-3.png" alt="" />
+							</div>
+							<a>Pink Flower Tree</a>
+						</div>
+						<div class="single-product product-two">
+							<div class="product-img">
+								<img src="./images/product-img-2.png" alt="" />
+							</div>
+							<a>Pink Flower Tree</a>
+						</div>
+						<div class="single-product product-three">
+							<div class="product-img">
+								<img src="./images/product-img-1.png" alt="" />
+							</div>
+							<a>Pink Flower Tree</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Services Area -->
+			<section class="services-area">
+				<div class="services container">
+					<div class="services-main flex-group">
+						<div class="single-service flex-group">
+							<img src="./images/delivery-service.png" alt="" />
+							<span>Same Day Delivery. Click & Collect.</span>
+						</div>
+						<div class="single-service flex-group">
+							<img src="./images/product-service.png" alt="" />
+							<span>Fresh Flowers. Local Growers..</span>
+						</div>
+						<div class="single-service flex-group">
+							<img src="./images/online-service.png" alt="" />
+							<span>24/7 Free Support.</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Sale Area -->
+			<section class="sale-area">
+				<div class="sale container">
+					<div class="sale-main flex-group">
+						<div class="sale-content">
+							<h3>Hot Deal ! Sale Up To 25% <span>Off</span></h3>
+							<p>
+								It is a long established fact that a reader will be distracted
+								by the readable content of a page when looking at its layout.
+							</p>
+							<button>Sign Up</button>
+						</div>
+						<div class="sale-img">
+							<img src="./images/sale-img.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Instagram Photos Area -->
+			<section class="instagram-photos-area">
+				<div class="instagram-photos container">
+					<h2>Instagram</h2>
+					<p>
+						It is a long established fact that a reader will be distracted by
+						the readable content of a page when looking at its layout.
+					</p>
+					<div class="instagram-photos-main flex-group">
+						<div class="single-photo">
+							<img src="./images/insta-01.png" alt="" />
+						</div>
+						<div class="single-photo">
+							<img src="./images/insta-02.png" alt="" />
+						</div>
+						<div class="single-photo">
+							<img src="./images/insta-03.png" alt="" />
+						</div>
+						<div class="single-photo">
+							<img src="./images/insta-04.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Producs Deals Area -->
+			<section class="product-deals-area">
+				<div class="product-deals container">
+					<h2>Get The Latest Deals</h2>
+					<p>$30 coupon for first shopping</p>
+					<form action="#">
+						<input type="email" name="email" id="email" />
+						<input type="submit" value="Subscribe" />
+					</form>
+				</div>
+			</section>
+
+			<!-- Footer Area -->
+			<section class="footer-area">
+				<div class="footer">
+					<h2>Flower<span class="footer-title">Shop</span></h2>
+					<p>
+						It is a long established fact that a reader will be distracted by
+						the readable content of a page when looking at its layout.
+					</p>
+					<p class="copyright">@2020-2023, FlowerShop.com. All rights reserved.</p>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>

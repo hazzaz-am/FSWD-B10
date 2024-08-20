@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Checkout</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="checkout.css" />
+	</head>
+	<body>
+		<main>
+			<form action="#">
+				<h2 class="checkout-title">Checkout</h2>
+				<div class="form-parts">
+					<div class="form-left-part">
+						<div class="form-control">
+							<label for="name">Name</label>
+							<input type="text" placeholder="Name" id="name" />
+						</div>
+						<div class="form-control">
+							<label for="email">Email</label>
+							<input type="email" placeholder="Email" id="checkout-email" />
+						</div>
+						<div class="form-control">
+							<label for="password">Password</label>
+							<input type="password" placeholder="Password" id="password" />
+						</div>
+						<div class="form-control">
+							<label for="address">Address</label>
+							<textarea
+								name="address"
+								id="address"
+								placeholder="Address"
+							></textarea>
+						</div>
+					</div>
+					<div class="form-right-part">
+						<div class="form-control">
+							<p>Payment Method:</p>
+							<div class="single__medium">
+								<input
+									type="radio"
+									name="single__medium"
+									id="cash-on-delivery"
+									value="Cash-on-delivery"
+								/>
+								<label for="cash-on-delivery">Cash on delivery</label>
+							</div>
+							<div class="single__medium">
+								<input
+									type="radio"
+									name="single__medium"
+									id="rocket"
+									value="Rocket"
+								/>
+								<label for="rocket">Rocket</label>
+							</div>
+							<div class="single__medium">
+								<input
+									type="radio"
+									name="single__medium"
+									id="nagad"
+									value="Nagad"
+								/>
+								<label for="nagad">Nagad</label>
+							</div>
+							<div class="single__medium">
+								<input
+									type="radio"
+									name="single__medium"
+									id="upay"
+									value="Upay"
+								/>
+								<label for="upay">Upay</label>
+							</div>
+						</div>
+						<div class="form-control-terms">
+							<input type="checkbox" name="terms" id="terms" required/>
+							<label for="terms">I accept terms & conditions</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-control">
+					<input type="submit" value="Place order" id="place order" />
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
