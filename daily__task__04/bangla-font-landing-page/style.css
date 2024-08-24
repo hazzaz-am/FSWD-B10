@@ -1,0 +1,80 @@
+@font-face {
+	font-family: "alinur";
+	src: url("./fonts/Li Alinur Banglaborno Unicode.ttf");
+	font-display: swap;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: alinur;
+	font-weight: 400;
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.flex-group {
+	display: flex;
+	align-items: center;
+}
+
+.top-nav {
+	text-align: center;
+	padding: 30px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.top-nav img {
+	width: 350px;
+}
+
+ul.flex-group {
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+ul li {
+	cursor: pointer;
+}
+
+ul a {
+	color: #111;
+}
+
+article {
+	width: 70%;
+	padding: 20px 0;
+}
+
+article .tag {
+	color: #ab0613;
+	margin-bottom: 10px;
+}
+
+article h2 {
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+p.reporter {
+	margin-bottom: 10px;
+}
+
+p.report-time {
+	margin-bottom: 10px;
+}
+
+p.article {
+	line-height: 30px;
+	text-align: justify;
+	padding: 0 50px;
+}
