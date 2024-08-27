@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+}
+
+.pricing-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pricing__tables-main {
+  justify-content: space-between;
+}
+
+.single__pricing-box {
+  border: 1px solid #ddd;
+  width: 32%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.single__pricing-title i {
+  border: 1px solid #1769ff;
+  border-radius: 50%;
+  padding: 4px;
+}
