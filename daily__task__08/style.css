@@ -1,0 +1,200 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-family: "Poppins", sans-serif;
+}
+
+.flex-group {
+	display: flex;
+	align-items: center;
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+nav.flex-group {
+	justify-content: space-between;
+	padding: 40px 0;
+}
+
+ul.nav-menu {
+	gap: 20px;
+}
+
+ul li {
+	cursor: pointer;
+}
+
+ul li a {
+	color: black;
+	display: inline-block;
+}
+
+.nav-cta .nav-btn {
+	padding: 8px 24px;
+	color: black;
+}
+
+.nav-btn.second {
+	background-color: hsla(205, 100%, 66%);
+	color: white;
+}
+
+.banner-area {
+	padding: 50px 0;
+	margin: 50px 0;
+	position: relative;
+}
+
+.sub-heading {
+	font-size: 20px;
+	letter-spacing: 3px;
+	font-weight: 500;
+	line-height: 30px;
+	color: hsla(243, 45%, 31%);
+}
+
+.banner-heading {
+	font-weight: 700;
+	font-size: 70px;
+	line-height: 81.55px;
+	color: hsl(257, 11%, 39%);
+}
+
+.banner-desc {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 31.2px;
+	letter-spacing: 5%;
+}
+
+.apply-btn {
+	display: inline-block;
+	padding: 10px 24px;
+	color: white;
+	background-color: hsla(205, 100%, 66%);
+	margin-top: 18px;
+}
+
+.apply-btn i {
+	position: relative;
+	left: 5px;
+	top: 1px;
+}
+
+.banner-text {
+	width: 50%;
+}
+
+.banner-img {
+	width: 50%;
+}
+
+.banner {
+	width: 100%;
+}
+
+.ring-left {
+	position: absolute;
+}
+
+.arrow-dot {
+	position: absolute;
+	left: 90%;
+	top: -180px;
+}
+
+.double-square {
+	position: absolute;
+	bottom: 0;
+}
+
+.double-hexagon {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.double-circle {
+	position: absolute;
+	right: 0;
+	top: 40%;
+}
+
+.banner-img {
+	position: relative;
+}
+
+.banner-sm-1 {
+	position: absolute;
+	top: 35%;
+	left: 0;
+}
+
+.banner-sm-2 {
+	position: absolute;
+	top: 10%;
+	left: 20px;
+}
+
+.banner-sm-3 {
+	position: absolute;
+	top: -30px;
+	left: 170px;
+}
+
+.banner-sm-4 {
+	position: absolute;
+	top: 30px;
+	left: 400px;
+}
+
+.banner-sm-5 {
+	position: absolute;
+	top: 180px;
+	left: 430px;
+}
+
+.banner-text {
+	position: relative;
+}
+
+.circle-1 {
+	position: absolute;
+	right: 0;
+}
+
+.circle-2 {
+	position: absolute;
+	right: 0;
+	bottom: -40px;
+}
+
+.circle-3 {
+	position: absolute;
+	right: 0;
+	bottom: -120px;
+}
+
+.circle-4 {
+	position: absolute;
+	right: 140px;
+	bottom: -40px;
+}
+
+.circle-5 {
+	position: absolute;
+	right: 140px;
+	bottom: -120px;
+}
+
+.circle-dots {
+	margin-top: 60px;
+}
