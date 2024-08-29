@@ -2,6 +2,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 img {
@@ -15,6 +21,7 @@ section {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+  background-color: white;
 }
 
 .container {
