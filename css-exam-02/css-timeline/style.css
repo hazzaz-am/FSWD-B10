@@ -1,0 +1,144 @@
+* {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #1e1e30;
+	padding: 60px 0;
+}
+
+.timeline {
+	max-width: 1140px;
+	margin: auto;
+	position: relative;
+}
+
+.timeline::after {
+	content: "";
+	position: absolute;
+	width: 6px;
+	background-color: #27293f;
+	top: 0;
+	bottom: 0;
+	left: 200px;
+}
+
+.container {
+	padding: 10px 40px;
+	width: 600px;
+	position: relative;
+	background-color: inherit;
+	right: -200px;
+	top: -30px;
+}
+
+.container::after {
+  font: var(--fa-font-solid);
+  font-weight: 500;
+  color: white;
+  content: '\f4da';
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+	position: absolute;
+	top: 26px;
+	left: -12px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background-color: white;
+	text-align: center;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.blue::after {
+  background-color: #008fff;
+}
+
+.pink::after {
+  background-color: #ff4c93;
+  font: var(--fa-font-solid);
+  font-weight: 500;
+  color: white;
+  content: '\f584';
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+	position: absolute;
+	top: 26px;
+	left: -12px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.lightgreen::after {
+  background-color: #00a183;
+  font: var(--fa-font-solid);
+  font-weight: 500;
+  color: white;
+  content: '\f588';
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+	position: absolute;
+	top: 26px;
+	left: -12px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.container::before {
+	content: "";
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	height: 0;
+	width: 0;
+	border: medium solid #27293f;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent #27293f transparent transparent;
+}
+
+.content {
+	padding: 20px;
+	background-color: #27293f;
+	position: relative;
+	border-radius: 6px;
+	color: white;
+}
+
+.content span {
+  display: inline-block;
+  background-color: #1e1e30;
+  color: white;
+  padding: 6px 8px;
+  border-radius: 3px;
+}
+
+.blue span {
+  background-color: #008fff;
+}
+
+.pink span {
+  background-color: #ff4c93;
+}
+
+.lightgreen span {
+  background-color: #00a183;
+}
+
+.content p:nth-child(3) {
+  color: #ccc;
+  font-size: 12px;
+}
