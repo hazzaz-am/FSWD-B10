@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+  margin-top: 20px;
+  width: 800px;
+}
+
+.parent {
+  background: url("./images/img_flwr.gif"), url("./images/paper.gif");
+  background-position: right bottom, top left;
+  background-repeat: no-repeat, repeat;
+  padding: 50px;
+  height: 200px;
+}
