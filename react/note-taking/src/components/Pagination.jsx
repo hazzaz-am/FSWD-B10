@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Pagination = ({ handleCurrentPage, totalPages }) => {
+const Pagination = ({ totalPages, handleCurrentPage }) => {
 	return (
 		<div
 			style={{

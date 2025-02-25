@@ -1,11 +1,39 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 
-const NoteForm = ({ editMode, onUpdateHandler }) => {
-	const [noteTitle, setNoteTitle] = useState("");
+const NoteForm = ({
+	editMode,
+	editableNote,
+	noteTitle,
+	onSetNoteTitle,
+	notes,
+	onSetNotes,
+	onSetEditMode,
+}) => {
+	const handleTitleChange = (event) => {
+		onSetNoteTitle(event.target.value);
+	};
 
-	const handleTitleChange = (e) => {
-		setNoteTitle(e.target.value);
+	const createHandler = () => {
+		const newNote = {
+			id: Date.now() + "",
+			title: noteTitle,
+			isCompleted: false,
+		};
+		onSetNotes([newNote, ...notes]);
+		onSetNoteTitle("");
+	};
+
+	const updateHandler = () => {
+		const updatedNote = {
+			...editableNote,
+			title: noteTitle,
+		};
+
+		const removePrevNote = notes.filter((note) => note.id !== editableNote.id);
+
+		onSetNotes([updatedNote, ...removePrevNote]);
+		onSetEditMode(false);
+		onSetNoteTitle("");
 	};
 
 	const submitHandler = (event) => {
@@ -14,7 +42,7 @@ const NoteForm = ({ editMode, onUpdateHandler }) => {
 		if (noteTitle.trim() === "") {
 			return alert(`Please Provide a valid title`);
 		}
-		editMode === true ? onUpdateHandler() : createHandler();
+		editMode === true ? updateHandler() : createHandler();
 	};
 
 	return (

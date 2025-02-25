@@ -1,8 +1,6 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 
-const NotesFilter = () => {
-	const [search, setSearch] = useState("");
-	const [filteredText, setFilteredText] = useState("all");
+const NotesFilter = ({ filteredText, onSetFilteredText, search, onSetSearch }) => {
 	return (
 		<div>
 			<div
@@ -15,7 +13,7 @@ const NotesFilter = () => {
 					name="search"
 					placeholder="Search by Title"
 					value={search}
-					onChange={(event) => setSearch(event.target.value)}
+					onChange={(event) => onSetSearch(event.target.value)}
 				/>
 			</div>
 
@@ -23,7 +21,7 @@ const NotesFilter = () => {
 				name="filter"
 				id="filter"
 				value={filteredText}
-				onChange={(e) => setFilteredText(e.target.value)}
+				onChange={(e) => onSetFilteredText(e.target.value)}
 			>
 				<option value="all">All</option>
 				<option value="completed">Completed</option>
@@ -32,4 +30,4 @@ const NotesFilter = () => {
 		</div>
 	);
 };
-export default NotesFilter;
+export default NotesFilter
