@@ -2,6 +2,9 @@ import "./App.css";
 import { useState } from "react";
 import { dummyNotes } from "./data";
 
+/**
+ * ? Set Items Per Page
+ */
 const ITEMS_PER_PAGE = 5;
 
 function App() {
@@ -55,11 +58,25 @@ function App() {
 	};
 
 	const updateHandler = () => {
+		// const newArr = notes.map((note) => {
+		// 	if (note.id === editableNote.id) {
+		// 		return { ...note, title: noteTitle };
+		// 	}
+
+		// 	return { ...note };
+		// });
+
+		/**
+		 * create a new object and update the title
+		 */
 		const updatedNote = {
 			...editableNote,
 			title: noteTitle,
 		};
 
+		/**
+		 * remove previous note from the array
+		 */
 		const removePrevNote = notes.filter((note) => note.id !== editableNote.id);
 
 		setNotes([updatedNote, ...removePrevNote]);
@@ -90,6 +107,8 @@ function App() {
 		})
 		// search by text
 		.filter((note) => note.title.includes(search));
+
+	// console.log(totalPages);
 
 	/**
 	 *
