@@ -1,16 +1,12 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
+import NoteProvider from "./provider/NoteProvider.jsx";
 
 const root = createRoot(document.getElementById("root"));
 
 root.render(
-	// <StrictMode>
-	<App />,
-	// </StrictMode>,
+	<NoteProvider>
+		<App />
+	</NoteProvider>
 );
-
-// App();
-
-// react -> react dom -> dom
