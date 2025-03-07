@@ -1,24 +1,20 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import NotesFilter from "./NotesFilter";
 import NotesList from "./NotesList";
 import Pagination from "./Pagination";
+import { useNoteValue } from "../provider/NoteProvider";
 
 const ITEMS_PER_PAGE = 5;
 
-const NotesSection = ({
-	onSetNoteTitle,
-	onSetEditMode,
-	onSetEditableNote,
-	notes,
-	onSetNotes,
-}) => {
+const NotesSection = () => {
 	const [filteredText, setFilteredText] = useState("all");
 	const [search, setSearch] = useState("");
 	const [currentPage, setCurrentPage] = useState(1);
 	const [skip, setSkip] = useState(0);
 
-	const totalPages = Math.ceil(notes.length / ITEMS_PER_PAGE);
+	const ctxValue = useNoteValue();
+
+	const totalPages = Math.ceil(ctxValue.notes.length / ITEMS_PER_PAGE);
 
 	function handleCurrentPage(pageNumber) {
 		setCurrentPage(pageNumber);
@@ -37,19 +33,16 @@ const NotesSection = ({
 				/>
 
 				<NotesList
-					notes={notes}
+					notes={ctxValue.notes}
 					skip={skip}
 					ITEMS_PER_PAGE={ITEMS_PER_PAGE}
 					currentPage={currentPage}
-					onSetNoteTitle={onSetNoteTitle}
-					onSetEditMode={onSetEditMode}
-					onSetEditableNote={onSetEditableNote}
-					onSetNotes={onSetNotes}
 					filteredText={filteredText}
 					search={search}
 				/>
 			</div>
-
+			{/* onSetNoteTitle = {setNoteTitle}; // onSetEditMode = {setEditMode};
+			onSetEditableNote = {setEditableNote}; // onSetNotes = {setNotes}; */}
 			<Pagination
 				totalPages={totalPages}
 				handleCurrentPage={handleCurrentPage}

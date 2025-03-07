@@ -1,55 +1,58 @@
-/* eslint-disable react/prop-types */
 
-const NoteForm = ({
-	editMode,
-	editableNote,
-	noteTitle,
-	onSetNoteTitle,
-	notes,
-	onSetNotes,
-	onSetEditMode,
-}) => {
+import { useNoteValue } from "../provider/NoteProvider";
+
+const NoteForm = () => {
+	const ctxValue = useNoteValue();
+
 	const handleTitleChange = (event) => {
-		onSetNoteTitle(event.target.value);
+		ctxValue.setNoteTitle(event.target.value);
 	};
 
 	const createHandler = () => {
 		const newNote = {
 			id: Date.now() + "",
-			title: noteTitle,
+			title: ctxValue.noteTitle,
 			isCompleted: false,
 		};
-		onSetNotes([newNote, ...notes]);
-		onSetNoteTitle("");
+		ctxValue.setNotes([newNote, ...ctxValue.notes]);
+		ctxValue.setNoteTitle("");
 	};
 
 	const updateHandler = () => {
 		const updatedNote = {
-			...editableNote,
-			title: noteTitle,
+			...ctxValue.editableNote,
+			title: ctxValue.noteTitle,
 		};
 
-		const removePrevNote = notes.filter((note) => note.id !== editableNote.id);
+		const removePrevNote = ctxValue.notes.filter(
+			(note) => note.id !== ctxValue.editableNote.id
+		);
 
-		onSetNotes([updatedNote, ...removePrevNote]);
-		onSetEditMode(false);
-		onSetNoteTitle("");
+		ctxValue.setNotes([updatedNote, ...removePrevNote]);
+		ctxValue.setEditMode(false);
+		ctxValue.setNoteTitle("");
 	};
 
 	const submitHandler = (event) => {
 		event.preventDefault();
 
-		if (noteTitle.trim() === "") {
+		if (ctxValue.noteTitle.trim() === "") {
 			return alert(`Please Provide a valid title`);
 		}
-		editMode === true ? updateHandler() : createHandler();
+		ctxValue.editMode === true ? updateHandler() : createHandler();
 	};
 
 	return (
 		<form onSubmit={submitHandler} className="note-form">
-			<input value={noteTitle} type="text" onChange={handleTitleChange} />
+			<input
+				value={ctxValue.noteTitle}
+				type="text"
+				onChange={handleTitleChange}
+			/>
 			<button type="submit">
-				{editMode === true ? "Updated Note" : "Create Note"}
+				{ctxValue.editMode === true
+					? "Updated Note"
+					: "Create Note"}
 			</button>
 		</form>
 	);

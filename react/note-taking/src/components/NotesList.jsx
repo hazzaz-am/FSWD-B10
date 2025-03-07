@@ -1,25 +1,27 @@
 /* eslint-disable react/prop-types */
+
+import { useNoteValue } from "../provider/NoteProvider";
+
 const NotesList = ({
 	notes,
 	skip,
 	ITEMS_PER_PAGE,
 	currentPage,
-	onSetNoteTitle,
-	onSetEditMode,
-	onSetEditableNote,
-	onSetNotes,
 	filteredText,
 	search,
 }) => {
+
+	const ctxValue = useNoteValue()
+
 	const removeHandler = (id) => {
 		const newArr = notes.filter((note) => note.id !== id);
-		onSetNotes(newArr);
+		ctxValue.setNotes(newArr);
 	};
 
 	const editHandler = (note) => {
-		onSetNoteTitle(note.title);
-		onSetEditMode(true);
-		onSetEditableNote(note);
+		ctxValue.setNoteTitle(note.title);
+		ctxValue.setEditMode(true);
+		ctxValue.setEditableNote(note);
 	};
 
 	const handleCompletedTask = (task) => {
@@ -30,7 +32,7 @@ const NotesList = ({
 			return note;
 		});
 
-		onSetNotes([...filteredTask]);
+		ctxValue.setNotes([...filteredTask]);
 	};
 
 	const filteredNotes = notes
