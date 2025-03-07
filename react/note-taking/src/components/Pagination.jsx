@@ -10,10 +10,7 @@ const Pagination = ({ totalPages, handleCurrentPage }) => {
 				gap: "20px",
 			}}
 		>
-			{/* 
-				/**
-				 * TODO: page number
-				 */}
+
 			{Array.from({ length: totalPages }, (_, i) => (
 				<button
 					style={{
