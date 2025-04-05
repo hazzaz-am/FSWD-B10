@@ -1,6 +1,11 @@
-/* eslint-disable react/prop-types */
+import { useNoteValue } from "../provider/NoteProvider";
 
-const NotesFilter = ({ filteredText, onSetFilteredText, search, onSetSearch }) => {
+const NotesFilter = () => {
+	const {
+		state: { searchTerm, filteredTerm },
+		dispatch,
+	} = useNoteValue();
+
 	return (
 		<div>
 			<div
@@ -12,16 +17,20 @@ const NotesFilter = ({ filteredText, onSetFilteredText, search, onSetSearch }) =
 					type="text"
 					name="search"
 					placeholder="Search by Title"
-					value={search}
-					onChange={(event) => onSetSearch(event.target.value)}
+					value={searchTerm}
+					onChange={(event) =>
+						dispatch({ type: "TRACK_SEARCH_TERM", payload: event.target.value })
+					}
 				/>
 			</div>
 
 			<select
 				name="filter"
 				id="filter"
-				value={filteredText}
-				onChange={(e) => onSetFilteredText(e.target.value)}
+				value={filteredTerm}
+				onChange={(e) =>
+					dispatch({ type: "FILTER_TERM", payload: e.target.value })
+				}
 			>
 				<option value="all">All</option>
 				<option value="completed">Completed</option>
@@ -30,4 +39,4 @@ const NotesFilter = ({ filteredText, onSetFilteredText, search, onSetSearch }) =
 		</div>
 	);
 };
-export default NotesFilter
+export default NotesFilter;
